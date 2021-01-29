@@ -1,0 +1,7 @@
+body{
+    background-color: black;
+}
+.container-fluid {
+    width: 75%;
+    min-height: 100vh;
+}

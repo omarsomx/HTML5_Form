@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>HTML5 Form Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card my-5">
+                    <h2 class="card-header">Payment form example</h2>
+
+                    <form class="needs-validation" novalidate>
+
+                        <div class="card-body">
+                            <div class="alert alert-danger" role="alert">
+                                Some fields are missing
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCard">Card #</label>
+                                    <input type="text" class="form-control" id="validationCard"
+                                        placeholder="XXXXXXXXXXXXXXXX" required pattern="^[0-9]*[1-9][0-9]*$"
+                                        maxlength="16" minlength="16">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCVC">CVC #</label>
+                                    <input type="text" class="form-control" id="validationCVC" placeholder="0000"
+                                        required pattern="^[0-9]*[1-9][0-9]*$" maxlength="4" minlength="4">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="validationCustomUsername">Amount</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername"
+                                            placeholder="Amount" pattern="\d+(\.\d{2})?" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom01">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01"
+                                        placeholder="First name" required pattern="[a-zA-Z]+">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom02">Last name</label>
+                                    <input type="text" class="form-control" id="validationCustom02"
+                                        placeholder="Last name" required pattern="[a-zA-Z]+">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCity">City</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="validationCity" placeholder=""
+                                            required pattern="[a-zA-Z]+">
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="validationState">State</label>
+                                    <select class="custom-select custom-select-md mb-3" id="validationState" required>
+                                        <option value="">Pick a State</option>
+                                        <option value="1">Texcoco</option>
+                                        <option value="2">El Tigre</option>
+                                        <option value="3">Caracas</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="validationPostal">Postal Code</label>
+                                    <input type="text" class="form-control" id="validationPostal" placeholder=""
+                                        pattern="\d+(\.\d{2})?" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <!-- radio buttons -->
+                                <div class="col-md-3">
+                                    <label for="validationPayment"> We accept: </label>
+                                    <div
+                                        class="container mb-3 input-group-text bg-secondary text-white fa-2x d-flex flex-wrap justify-content-around">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="validationPayment" id="inlineRadio1" value="option1" required>
+                                            <label class="form-check-label" for="validationPayment"><i
+                                                    class="fab fa-cc-mastercard"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="validationPayment" id="inlineRadio2" value="option2" required>
+                                            <label class="form-check-label" for="validationPayment"><i
+                                                    class="fab fa-cc-visa"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="validationPayment" id="inlineRadio3" value="option3" required>
+                                            <label class="form-check-label" for="validationPayment"><i
+                                                    class="fab fa-cc-diners-club"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="validationPayment" id="inlineRadio4" value="option4" required>
+                                            <label class="form-check-label" for="validationPayment"><i
+                                                    class="fab fa-cc-amex"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- div vacio -->
+                                <div class="col-md-3">
+                                    <div class="container mb-3 border-white bg-white">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Message</label>
+                                        <textarea class="form-control" cols="6" rows="4"></textarea>
+                                        <p class="text-secondary">Add any notes here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="form-group row mb-0">
+                                <div class="col-md-12 text-right">
+                                    <a href="index.html" class="btn btn-secondary" role="button" aria-pressed="true">Cancel</a>
+                                    <button type="submit" class="btn btn-primary"  >Sign in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="formScript.js"></script>
+</body>
+
+</html>
